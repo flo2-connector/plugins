@@ -14,7 +14,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/flo2-connector/flo2-cad.git",
-        "sha": "75d8a1aa97f07f44f4634add5c43a183e23324c6"
+        "sha": "84efe67e2dfe20785f97586f0fa3180e9a349054"
       },
       "homepage": "https://github.com/flo2-connector/flo2-cad"
     },
@@ -36,7 +36,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/flo2-connector/flo2-calc.git",
-        "sha": "7e3f0e6a69d504e782b8a4b6c79aee99196df3fa"
+        "sha": "f9e82c37ad425ee06035ab1d991ed5738fe04f73"
       },
       "homepage": "https://github.com/flo2-connector/flo2-calc"
     }
