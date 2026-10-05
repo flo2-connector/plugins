@@ -9,12 +9,12 @@
   "plugins": [
     {
       "name": "flo2-cad",
-      "description": "Design casting-ready jewelry with an agent: a ring in a named size with a prong or bezel head, round or emerald-cut stones sized from their grading report, checked against cited casting limits before any STL or 3MF is released.",
+      "description": "Design casting-ready metal pieces with an agent: rings in a named size with prong or bezel heads, stones sized from their grading report, and shapes of your own such as cupped petals and leaves, checked against cited casting limits before any STL or 3MF is released.",
       "category": "design",
       "source": {
         "source": "url",
         "url": "https://github.com/flo2-connector/flo2-cad.git",
-        "sha": "d513ba888ce4f5d2796b810afee3cea1b3696794"
+        "sha": "75d8a1aa97f07f44f4634add5c43a183e23324c6"
       },
       "homepage": "https://github.com/flo2-connector/flo2-cad"
     },
@@ -28,6 +28,17 @@
         "sha": "86f262115e32c2929a5ac02206a1e24cec14ec88"
       },
       "homepage": "https://github.com/flo2-connector/flo2-ifc"
+    },
+    {
+      "name": "flo2-calc",
+      "description": "The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, arrays and the FFT, each result exact or labelled with its error bound, shown with its formula and working, and kept as a re-runnable record a design decision can cite.",
+      "category": "design",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/flo2-connector/flo2-calc.git",
+        "sha": "7e3f0e6a69d504e782b8a4b6c79aee99196df3fa"
+      },
+      "homepage": "https://github.com/flo2-connector/flo2-calc"
     }
   ]
 }
