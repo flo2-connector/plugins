@@ -27,7 +27,8 @@ grok plugin install flo2-cad@plugins --trust
 
 | Plugin | What it does | Repository |
 |---|---|---|
-| `flo2-cad` | Designs casting-ready jewelry with an agent. A ring is given a named size and a prong or bezel head. Every piece is checked against cited casting limits before any STL or 3MF is released. | [flo2-connector/flo2-cad](https://github.com/flo2-connector/flo2-cad) |
+| `flo2-cad` | Designs casting-ready metal pieces with an agent. It builds rings today; bracelets and sculpture components are in its scope, not yet in its templates. Shapes of your own, such as cupped petals and leaves, can be added. Every piece is checked against cited casting limits before any STL or 3MF is released. | [flo2-connector/flo2-cad](https://github.com/flo2-connector/flo2-cad) |
+| `flo2-calc` | The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, arrays and the FFT, each result exact or labelled with its error bound, with its formula and working, kept as a re-runnable record a design decision can cite. | [flo2-connector/flo2-calc](https://github.com/flo2-connector/flo2-calc) |
 | `flo2-ifc` | IfcOpenShell's ifcmcp, the MCP server for IFC building models. It loads, queries, edits, validates, quantifies and plots a building model. | [flo2-connector/flo2-ifc](https://github.com/flo2-connector/flo2-ifc) |
 
 `reflow2` and `flo2` join this list once their own plugins are released.
