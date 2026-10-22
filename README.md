@@ -28,7 +28,7 @@ grok plugin install flo2-cad@plugins --trust
 | Plugin | What it does | Repository |
 |---|---|---|
 | `flo2-cad` | Designs casting-ready metal pieces with an agent. It builds rings today; bracelets and sculpture components are in its scope, not yet in its templates. Shapes of your own, such as cupped petals and leaves, can be added. Every piece is checked against cited casting limits before any STL or 3MF is released. | [flo2-connector/flo2-cad](https://github.com/flo2-connector/flo2-cad) |
-| `flo2-calc` | The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, arrays and the FFT, each result exact or labelled with its error bound, with its formula and working, kept as a re-runnable record a design decision can cite. | [flo2-connector/flo2-calc](https://github.com/flo2-connector/flo2-calc) |
+| `flo2-calc` | The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, exact integer operators (divisibility, gcd, primality, factorization), named hypothesis tests with their power and sample size, arrays and the FFT, each result exact or labelled with its error bound, with its formula and working, kept as a re-runnable record a design decision can cite. | [flo2-connector/flo2-calc](https://github.com/flo2-connector/flo2-calc) |
 | `flo2-ifc` | IfcOpenShell's ifcmcp, the MCP server for IFC building models. It loads, queries, edits, validates, quantifies and plots a building model. | [flo2-connector/flo2-ifc](https://github.com/flo2-connector/flo2-ifc) |
 
 `reflow2` and `flo2` join this list once their own plugins are released.
@@ -46,6 +46,10 @@ designs kept for you, connect [flo2.io](https://flo2.io) instead. flo2.io runs t
 
 Claude Code and Grok Build both read this file. To move a plugin to a new release, change its `sha` to the
 released commit. Then check the file with `claude plugin validate .` and open a pull request.
+
+Once a month, and on demand, the `pins-are-current` workflow compares each pinned `sha` with the head of that
+plugin's default branch and fails, naming every plugin whose pin is behind, so a stale pin is seen rather than
+found by someone installing an old release.
 
 ## Licence
 
