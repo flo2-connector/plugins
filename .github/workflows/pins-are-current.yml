@@ -1,0 +1,41 @@
+name: pins-are-current
+
+# Once a month, and on demand: does each plugin's pinned sha match the head of
+# its repository's default branch? A pin that is behind fails the run, naming
+# the plugin, its pin, and how far behind it is.
+on:
+  schedule:
+    - cron: "17 6 1 * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".claude-plugin/marketplace.json"
+      - ".github/workflows/pins-are-current.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  pins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare each pin with its repository's head
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, sys
+          d = json.load(open(".claude-plugin/marketplace.json"))
+          behind = []
+          for p in d["plugins"]:
+              src = p["source"]
+              url, pin = src["url"], src["sha"]
+              out = subprocess.run(["git", "ls-remote", url, "HEAD"], capture_output=True, text=True, check=True).stdout
+              head = out.split()[0]
+              state = "current" if head == pin else "BEHIND"
+              print(f"{p['name']}: pinned {pin[:7]}, head {head[:7]}: {state}")
+              if head != pin:
+                  behind.append(p["name"])
+          if behind:
+              print(f"::error::{len(behind)} pin(s) behind their repository's head: {', '.join(behind)}. Move each to the released commit, or say in the pull request why it is held back.")
+              sys.exit(1)
+          PY

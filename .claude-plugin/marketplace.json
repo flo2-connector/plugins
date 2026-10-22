@@ -14,7 +14,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/flo2-connector/flo2-cad.git",
-        "sha": "c678b6211dc2c7272ca6cbffb73dc45212cacc55"
+        "sha": "362c4739b065d015e383a234c332f2b45e8507f7"
       },
       "homepage": "https://github.com/flo2-connector/flo2-cad"
     },
@@ -31,12 +31,12 @@
     },
     {
       "name": "flo2-calc",
-      "description": "The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, arrays and the FFT, each result exact or labelled with its error bound, shown with its formula and working, and kept as a re-runnable record a design decision can cite.",
+      "description": "The calculator of record for an agent: exact math and logic with units checked, correctly rounded functions and statistics, exact integer operators (divisibility, gcd, primality, factorization), named hypothesis tests with their power and sample size, arrays and the FFT, each result exact or labelled with its error bound, shown with its formula and working, and kept as a re-runnable record a design decision can cite.",
       "category": "design",
       "source": {
         "source": "url",
         "url": "https://github.com/flo2-connector/flo2-calc.git",
-        "sha": "f9e82c37ad425ee06035ab1d991ed5738fe04f73"
+        "sha": "02e2613c6a499411475773b2041beb95739ee277"
       },
       "homepage": "https://github.com/flo2-connector/flo2-calc"
     }
